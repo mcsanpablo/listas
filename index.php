@@ -108,8 +108,8 @@
 </head>
 <body>
     <header>
-        <a href="http://localhost/musica/index.html">Inicio</a>
-        <a href="http://localhost/musica/canciones.php">Canciones</a>
+        <a href="https://mcsanpablo.github.io/equipodemusicasp/">Inicio</a>
+        <a href="https://mcsanpablo.github.io/canciones/">Canciones</a>
     </header>
     
     <div class="container">
