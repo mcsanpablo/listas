@@ -24,7 +24,7 @@
         header a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-size: 18px;
         }
 
@@ -40,20 +40,20 @@
 
         h1 {
             text-align: center;
-            font-size: 36px;
+            font-size: 28px;
             margin-bottom: 10px;
             color: #d4d4d4;
         }
 
         h2 {
             text-align: center;
-            font-size: 28px;
+            font-size: 22px;
             margin: 20px 0;
             color: #76c7c0;
         }
 
         h3 {
-            font-size: 24px;
+            font-size: 20px;
             cursor: pointer;
             color: #76c7c0;
             margin: 15px 0;
@@ -70,6 +70,7 @@
             border-left: 5px solid #76c7c0;
             margin-top: 10px;
             color: #cfcfcf;
+            border-radius: 5px;
         }
 
         .list-details p, .list-details h4 {
@@ -90,6 +91,48 @@
 
         .download-btn:hover {
             background-color: #5ab5ac;
+        }
+
+        @media (max-width: 768px) {
+            header a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .download-btn {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
@@ -189,7 +232,7 @@
                 <p>El señor es mi rey</p>
                 <p>Cristo no está muerto</p>
                 <p><strong>ADORACIONES:</strong> Dios imparable</p>
-                <br></br>
+                <br>
                 <h4>Segundo culto</h4>
                 <p><strong>ADORACIONES:</strong> Siempre fiel</p>
                 <p>Santo por siempre</p>
