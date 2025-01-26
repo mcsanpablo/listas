@@ -29,6 +29,9 @@
             top: 0;
             left: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         header a {
@@ -40,6 +43,15 @@
 
         header a:hover {
             text-decoration: underline;
+        }
+
+        .banner-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            vertical-align: middle;
         }
 
         .container {
@@ -137,7 +149,6 @@
             color: #5ab5ac;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
         function toggleList(listId) {
             const list = document.getElementById(listId);
@@ -185,20 +196,84 @@
 </head>
 <body>
     <header>
+        <img src="imagen/logo1.png" alt="Logo" class="banner-img">
         <a href="https://mcsanpablo.github.io/equipodemusicasp/">Inicio</a>
         <a href="https://mcsanpablo.github.io/canciones/">Canciones</a>
     </header>
     
     <div class="container">
         <h1>Lista de Canciones y Listas Semanales</h1>
-
-        <!-- Search bar -->
         <div class="search-bar">
             <input id="searchInput" type="text" placeholder="Buscar en las listas..." oninput="searchLists()">
             <button onclick="clearSearch()">&times;</button>
         </div>
-
-        <h2>DICIEMBRE 2024</h2>
+        <h2>ENERO 2025</h2>
+        <!-- Listas de canciones -->
+        <section>
+            <h3 onclick="toggleList('list72')">Lista Enero 2025 - DOMINGO 5</h3>
+            <div id="list72" class="list-details">
+                <p>Bendeciré a Jehová</p>
+                <p>Cantaré a Jehová</p>
+                <p>Alabad a Jehová</p>
+                <p>El gozo del Señor</p>
+                <p>Te exaltaré</p>
+                <p>Trae un salmo</p>
+                <p>Me gozaré</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Siempre fiel</p>
+                <p>Tu nombre</p>
+                <p><strong>OFRENDAS:</strong> Queremos a Cristo</p>
+                <button class="download-btn" onclick="downloadList('list72', 'Lista DOMINGO 5')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list73')">Lista Enero 2025 - DOMINGO 12</h3>
+            <div id="list73" class="list-details">
+                <p>Alabaré, alabaré</p>
+                <p>Alabad a jehová</p>
+                <p>Solo Dios</p>
+                <p>Una mirada de fe</p>
+                <p>Yo tengo un gozo en mi alma</p>
+                <p>Yo tengo un amigo que me ama</p>
+                <p>Donde está el espíritu de Dios</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Cuán grande es él</p>
+                <p>Dios lo envió</p>
+                <p>Cuán bello es el Señor</p>
+                <p><strong>OFRENDAS:</strong> Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list73', 'Lista DOMINGO 12')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list74')">Lista Enero 2025 - DOMINGO 19</h3>
+            <div id="list74" class="list-details">
+                <p>Te exaltaré</p>
+                <p>Con óleo de alegria</p>
+                <p>El poderoso de Israel</p>
+                <p>Cantaré a Señor</p>
+                <p>Así como David</p>
+                <p>Remolineando</p>
+                <p>Cristo no esta muerto</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Tu nombre</p>
+                <p>Siempre fiel</p>
+                <p><strong>OFRENDAS:</strong> Bueno es alabarte</p>
+                <button class="download-btn" onclick="downloadList('list74', 'Lista DOMINGO 26')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list75')">Lista Enero 2025 - DOMINGO 19</h3>
+            <div id="list75" class="list-details">
+                <p>Oh gracias</p>
+                <p>Al que me ciñe</p>
+                <p>Al que es digno</p>
+                <p>Soy nueva criatura</p>
+                <p>Estamos todos unidos</p>
+                <p>Queremos a Cristo celebrar</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Abre mis ojos</p>
+                <p>Al que está sentado</p>
+                <p>Agnus dai(Aleluya)</p>
+                <p><strong>OFRENDAS:</strong> Cantad alegres a Dios (Salmos 100)</p>
+                <button class="download-btn" onclick="downloadList('list75', 'Lista DOMINGO 26')">Descargar en Word</button>
+            </div>
+        </section>
+            <br>
+            <h2>DICIEMBRE 2024</h2>
         <!-- Listas de canciones -->
         <section>
             <h3 onclick="toggleList('list1')">Lista Diciembre 2024 - DOMINGO 8</h3>
@@ -209,6 +284,9 @@
                 <p>Con óleo de alegría</p>
                 <p>El Señor es mi rey</p>
                 <p>Cristo no está muerto</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Siempre fiel</p>
+                <p>Tu nombre</p>
                 <p><strong>OFRENDAS:</strong> Rebosa mi corazón.</p>
                 <button class="download-btn" onclick="downloadList('list1', 'Lista DOMINGO 8')">Descargar en Word</button>
             </div>
@@ -222,7 +300,8 @@
                 <p>Mi Dios es grande y fuerte</p>
                 <p>Celebra Victorioso</p>
                 <p>Levántate Señor (Bm)</p>
-                <p>Abre mis ojos</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Abre mis ojos</p>
                 <p>Agnus Dei (Aleluya)</p>
                 <p>Milagroso abres caminos</p>
                 <p><strong>OFRENDAS:</strong> Al que es digno.</p>
@@ -238,7 +317,8 @@
                 <p>Te exaltaré (3 veces)</p>
                 <p>Alzaré mis ojos (3 veces)</p>
                 <p>Yo me alegré (3 veces)</p>
-                <p>Dios el más grande</p>
+                <br>
+                <p><strong>ADORACIONES:</strong>Dios el más grande</p>
                 <p>Hermoso eres (Marcos Witt)</p>
                 <p>Exáltate (Marcos Witt, solo coro 3 veces)</p>
                 <p><strong>OFRENDAS:</strong> Bueno es alabarte.</p>
@@ -254,7 +334,7 @@
                 <p>Grande es el Señor</p>
                 <p>Remolineando</p>
                 <p>Así como David</p>
-                <p>Dios imparable (completo)</p>
+                <p><strong>ADORACIONES:</strong>Dios imparable (completo)</p>
                 <p>Santo por siempre</p>
                 <p><strong>OFRENDAS:</strong> Me gozaré</p>
                 <button class="download-btn" onclick="downloadList('list4', 'Lista DOMINGO 29')">Descargar en Word</button>
@@ -722,6 +802,30 @@
                 <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
                 <button class="download-btn" onclick="downloadList('list31', 'Lista DOMINGO 28')">Descargar en Word</button>
             </div> 
+            <h3 onclick="toggleList('list37')">Lista de semana santa 2024</h3>
+            <div id="list37" class="list-details">
+                <h4>Primera noche</h4>
+                <p>Le llaman guerrero</p>
+                <p>Eres Señor Vencedor</p>
+                <p>El poderoso de Israel</p>
+                <p>Cantare al Señor por siempre</p>
+                <p>Los enemigos de Jehová</p>
+                <p>Tomamos autoridad</p>
+                <p><strong>ADORACIONES:</strong> Tu Nombre</p>
+                <br>
+                <h4>Segunda noche</h4>
+                <p>El Señor es mi rey</p>
+                <p>Jehová es mi guerrero</p>
+                <p>Cristo no está muerto</p>
+                <p>La tengo</p>
+                <p>Hay un gozo que no puedo parar</p>
+                <p>Danza hija de Sión</p>
+                <p>Donde está el Espíritu de Dios</p>
+                <p>Libre</p>
+                <p>Resplandece</p>
+                <p><strong>ADORACIONES:</strong> Dios lo envió</p>
+                <button class="download-btn" onclick="downloadList('list37', 'Lista de semana santa 2024')">Descargar en Word</button>
+            </div>
     </section>
     <br>
     <h2>MARZO 2024</h2>
@@ -799,31 +903,562 @@
                 <p><strong>OFRENDAS:</strong> Te exaltamos</p>
                 <button class="download-btn" onclick="downloadList('list36', 'Lista DOMINGO 31')">Descargar en Word</button>   
             </div> 
-            <h3 onclick="toggleList('list37')">Lista de semana santa</h3>
-            <div id="list37" class="list-details">
-                <h4>Primera noche</h4>
-                <p>Le llaman guerrero</p>
-                <p>Eres Señor Vencedor</p>
+    </section>
+    <br>
+    <h2>FEBRERO 2024</h2>
+        <section>
+            <h3 onclick="toggleList('list38')">Lista Febrero 2024 - DOMINGO 4</h3>
+            <div id="list38" class="list-details">
+                <p>Hay Libertad (La IBI)</p>
+                <p>Increíble</p>
+                <p>Con Óleo de alegría</p>
+                <p>El Señor es mi Rey</p>
                 <p>El poderoso de Israel</p>
-                <p>Cantare al Señor por siempre</p>
-                <p>Los enemigos de Jehová</p>
-                <p>Tomamos autoridad</p>
-                <p><strong>ADORACIONES:</strong> Tu Nombre</p>
+                <p>Trae un salmo</p>
+                <p>Alzaré mis ojos</p>
+                <p>Yo me alegré</p>
                 <br>
-                <h4>Segunda noche</h4>
+                <p><strong>ADORACIONES:</strong> Alzo mi voz</p>
+                <p>Tu Fidelidad</p>
+                <p><strong>OFRENDAS:</strong>  Pueblos todos</p>
+                <button class="download-btn" onclick="downloadList('list38', 'Lista DOMINGO 4')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list39')">Lista Junio 2024 - DOMINGO 11</h3>
+            <div id="list39" class="list-details">
+                <p>Oh gracias</p>
+                <p>Al que me ciñe</p>
+                <p>Cambiaré mi tristeza</p>
+                <p>Al que es digno</p>
+                <p>Tu nombre oh Dios</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Yo vine a alabar a Dios</p>
+                <p>Queremos darte gloria</p>
+                <p>Cristo te exalto</p>
+                <p><strong>OFRENDAS:</strong>Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list39', 'Lista DOMINGO 11')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list40')">Lista Julio 2024 - DOMINGO 18</h3>
+            <div id="list40" class="list-details">
+                <p>Coritos:</p>
+                <p>No hay Dios</p>
+                <p>Solamente en cristo</p>
+                <p>Viva la fe</p>
+                <p>Oh que regalo</p>
+                <p>Solo Dios hace al hombre feliz</p>
+                <p>Una mirada de fe</p>
+                <p>El gozo del señor</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Al que está sentado</p>
+                <p>Agnus dei (aleluya)</p>
+                <p>Creo en ti</p>
+                <p><strong>OFRENDAS:</strong>Salmos 100 (Cantad alegres)</p>
+                <button class="download-btn" onclick="downloadList('list40', 'Lista DOMINGO 18')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list41')">Lista Julio 2024 - DOMINGO 25</h3>
+            <div id="list41" class="list-details">
                 <p>El Señor es mi rey</p>
                 <p>Jehová es mi guerrero</p>
                 <p>Cristo no está muerto</p>
                 <p>La tengo</p>
-                <p>Hay un gozo que no puedo parar</p>
-                <p>Danza hija de Sión</p>
                 <p>Donde está el Espíritu de Dios</p>
                 <p>Libre</p>
                 <p>Resplandece</p>
-                <p><strong>ADORACIONES:</strong> Dios lo envió</p>
-                <button class="download-btn" onclick="downloadList('list37', 'Lista de semana santa')">Descargar en Word</button>
+                <br>
+                <p><strong>ADORACIONES:</strong> Abre mis ojos/p>
+                <p>Dios Imparable</p>
+                <p><strong>OFRENDAS:</strong>Rebosa mi corazón</p>
+                <button class="download-btn" onclick="downloadList('list41', 'Lista DOMINGO 25')">Descargar en Word</button>
             </div>
     </section>
+    <br>
+    <h2>DICIEMBRE 2023</h2>
+        <section>
+            <h3 onclick="toggleList('list42')">Lista Diciembre 2023 - DOMINGO 10</h3>
+            <div id="list42" class="list-details">
+                <p>Guárdame oh Dios</p>
+                <p>Bendeciré a Jehová</p>
+                <p>Cantaré yo a Jehová</p>
+                <p>Trae un Salmo</p>
+                <p>Te exaltaré (3 veces)</p>
+                <p>Alzaré mis ojos (3 veces)</p>
+                <p>Yo me alegré (3 veces)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Creo en ti</p>
+                <p>Cuán grande es él</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list42', 'Lista DOMINGO 10')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list43')">Lista Diciembre 2023 - DOMINGO 17</h3>
+            <div id="list43" class="list-details">
+                <p>Heme aquí (versión completa)</p>
+                <p>Mi Dios es grande y fuerte</p>
+                <p>Libre (Yo he tomado)</p>
+                <p>Yeshúa</p>
+                <p>Las bodas del cordero</p>
+                <p>Me gozaré</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios imparable</p>
+                <p>Dios el más grande</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list43', 'Lista DOMINGO 17')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list44')">Lista Diciembre 2024 - DOMINGO 24</h3>
+            <div id="list44" class="list-details">
+                <p>Oh gracias</p>
+                <p>Al que me ciñe</p>
+                <p>Cambiaré mi tristeza</p>
+                <p>Al que es digno</p>
+                <p>Soy nueva criatura</p>
+                <p>Estamos todos unidos</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Abre mis ojos</p>
+                <p>Al que esta sentado</p>
+                <p>Agnus dei(aleluya)</p>
+                <p><strong>OFRENDAS:</strong>El gozo del señor</p>
+                <button class="download-btn" onclick="downloadList('list44', 'Lista DOMINGO 24')">Descargar en Word</button>
+            </div>
+    </section>
+    <br>
+    <h2>OCTUBRE 2023</h2>
+        <section>
+            <h3 onclick="toggleList('list45')">Lista Octubre 2023 - DOMINGO 1</h3>
+            <div id="list45" class="list-details">
+                <p>Coritos:</p>
+                <p>No hay Dios</p>
+                <p>Solamente en cristo</p>
+                <p>Viva la fe</p>
+                <p>Oh que regalo</p>
+                <p>Solo Dios hace al hombre feliz</p>
+                <p>Una mirada de fe</p>
+                <p>El gozo del señor</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Alzo mi voz</p>
+                <p>Yo vine a alabar</p>
+                <p>Queremos darte gloria</p>
+                <p><strong>OFRENDAS:</strong>  Pueblos todos</p>
+                <button class="download-btn" onclick="downloadList('list45', 'Lista DOMINGO 1')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list46')">Lista Octubre 2023 - DOMINGO 8</h3>
+            <div id="list46" class="list-details">
+                <p>Heme aquí (versión completa)</p>
+                <p>Mi Dios es grande y fuerte</p>
+                <p>Levántate Señor</p>
+                <p>Libre (Yo he tomado)</p>
+                <p>Yeshúa</p>
+                <p>Las bodas del cordero</p>
+                <p>Me gozaré</p>
+                <p>Así como David</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios imparable</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list46', 'Lista DOMINGO 8')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list47')">Lista Octubre 2023 - DOMINGO 15</h3>
+            <div id="list47" class="list-details">
+                <p>Guárdame oh Dios</p>
+                <p>Bendeciré a Jehová</p>
+                <p>Cantaré yo a Jehová</p>
+                <p>Trae un Salmo</p>
+                <p>Te exaltaré (3 veces)</p>
+                <p>Alzaré mis ojos (3 veces)</p>
+                <p>Yo me alegré (3 veces)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Cuán grande es él</p>
+                <p>Tu Fidelidad</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list47', 'Lista DOMINGO 15')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list48')">Lista Octubre 2023 - DOMINGO 22</h3>
+            <div id="list48" class="list-details">
+                <p>El Señor es mi rey</p>
+                <p>Cristo no está muerto</p>
+                <p>Donde está el Espíritu de Dios</p>
+                <p>Libre</p>
+                <p>Resplandece</p>
+                <p>Su nombre de guerra</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> El Espíritu de Dios</p>
+                <p>Abre mis ojos oh Cristo</p>
+                <p><strong>OFRENDAS:</strong>  Rebosa mi corazón</p>
+                <button class="download-btn" onclick="downloadList('list48', 'Lista DOMINGO 22')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list49')">Lista Octubre 2024 - DOMINGO 29</h3>
+            <div id="list49" class="list-details">
+                <p>Oh gracias</p>
+                <p>Al que me ciñe</p>
+                <p>Cambiaré mi tristeza</p>
+                <p>Al que es digno</p>
+                <p>Soy nueva criatura</p>
+                <p>Estamos todos unidos</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Aquí estás (Milagroso abres caminos)</p>
+                <p>Queremos darte gloria</p>
+                <p><strong>OFRENDAS:</strong>Bendeciré a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list49', 'Lista DOMINGO 29')">Descargar en Word</button>
+            </div>
+    </section>
+    <br>
+    <h2>SETIEMBRE 2023</h2>
+        <section>
+            <h3 onclick="toggleList('list50')">Lista Setiembre 2023 - DOMINGO 3</h3>
+            <div id="list50" class="list-details">
+                <p>El Dios que adoramos</p>
+                <p>Hay Libertad (IBI)</p>
+                <p>Dios Poderoso</p>
+                <p>Libre (Yo he tomado)</p>
+                <p>Su nombre de Guerra es Jehová</p>
+                <p>Yeshúa</p>
+                <p>Heme Aquí</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Hermoso Nombre</p>
+                <p>Cristo te exalto</p>
+                <p><strong>OFRENDAS:</strong>  Cambiaré mi tristeza</p>
+                <button class="download-btn" onclick="downloadList('list50', 'Lista DOMINGO 3')">Descargar en Word</button>
+            </div> 
+    </section>
+    <br>
+    <h2>AGOSTO 2023</h2>
+        <section>
+            <h3 onclick="toggleList('list51')">Lista Agosto 2023 - DOMINGO 13</h3>
+            <div id="list51" class="list-details">
+                <p>Al que me ciñe</p>
+                <p>Al que es Digno</p>
+                <p>Soy Nueva Criatura</p>
+                <p>Oh Gracias</p>
+                <p>Te Alabaré</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Milagroso abres caminos</p>
+                <p>El Espíritu de Dios</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list51', 'Lista DOMINGO 13')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list52')">Lista Agosto 2023 - DOMINGO 20</h3>
+            <div id="list52" class="list-details">
+                <p>Libre</p>
+                <p>Resplandece</p>
+                <p>Fiesta</p>
+                <p>Con óleo de alegría</p>
+                <p>El Señor es mi rey</p>
+                <p>Cristo no está muerto</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios Imparable</p>
+                <p>Dios el más grande</p>
+                <p><strong>OFRENDAS:</strong>Salmos 100</p>
+                <button class="download-btn" onclick="downloadList('list52', 'Lista DOMINGO 20')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list53')">Lista Agosto 2024 - DOMINGO 27</h3>
+            <div id="list53" class="list-details">
+                <p>Coritos:</p>
+                <p>No hay Dios</p>
+                <p>Solamente en cristo</p>
+                <p>Viva la fe</p>
+                <p>Oh que regalo</p>
+                <p>Solo Dios hace al hombre feliz</p>
+                <p>Una mirada de fe</p>
+                <p>El gozo del señor</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Alzo mi voz</p>
+                <p>Yo vine alabar</p>
+                <p>Queremos darte gloria</p>
+                <p><strong>OFRENDAS:</strong>Pueblos todos</p>
+                <button class="download-btn" onclick="downloadList('list53', 'Lista DOMINGO 27')">Descargar en Word</button>
+            </div>
+
+    </section>
+    <br>
+    <h2>JULIO 2023</h2>
+        <section>
+        <h3 onclick="toggleList('list58')">Lista Julio 2023 - DOMINGO 2</h3>
+            <div id="list58" class="list-details">
+                <p>Dios Poderoso</p>
+                <p>Increíble (Miel San Marcos)</p>
+                <p>Hay libertad (Art Aguilera)</p>
+                <p>Los Muros Caerán</p>
+                <p>Toda la Noche</p>
+                <p>Así como David danzaba</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Cuan Bello es el Señor</p>
+                <p>Yo Vine a Alabar</p>
+                <p><strong>OFRENDAS:</strong>  Salmos 100</p>
+                <button class="download-btn" onclick="downloadList('list58', 'Lista DOMINGO 2')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list54')">Lista Julio 2023 - DOMINGO 9</h3>
+            <div id="list54" class="list-details">
+            <p>Guárdame oh Dios</p>
+                <p>Bendeciré a Jehová</p>
+                <p>Cantaré yo a Jehová</p>
+                <p>Trae un Salmo</p>
+                <p>Te exaltaré (3 veces)</p>
+                <p>Alzaré mis ojos (3 veces)</p>
+                <p>Yo me alegré (3 veces)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Cuan Grande es él</p>
+                <p>Queremos darte gloria</p>
+                <p>Tu Fidelidad</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list54', 'Lista DOMINGO 9')">Descargar en Word</button>
+            </div> 
+            <h3 onclick="toggleList('list55')">Lista Julio 2023 - DOMINGO 16</h3>
+            <div id="list55" class="list-details">
+                <p>Mi Dios es grande y fuerte</p>
+                <p>Libre (Yo he tomado toda autoridad)</p>
+                <p>Yeshúa</p>
+                <p>Heme Aquí</p>
+                <p>Las Bodas del cordero</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios el más grande</p>
+                <p>Al que está sentado</p>
+                <p>Agnus Dei (Aleluya)</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list55', 'Lista DOMINGO 16')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list56')">Lista Julio 2023 - DOMINGO 23</h3>
+            <div id="list56" class="list-details">
+                <p>El Dios que adoramos</p>
+                <p>Canto, danzo, salto</p>
+                <p>Yo Venceré (versión completa)</p>
+                <p>Así como David danzaba</p>
+                <p>Cantaré al Señor</p>
+                <p>Me gozaré</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios Imparable</p>
+                <p>Tu nombre</p>
+                <p><strong>OFRENDAS:</strong>  El gozo del Señor</p>
+                <button class="download-btn" onclick="downloadList('list56', 'Lista DOMINGO 23')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list57')">Lista Julio 2023 - DOMINGO 30</h3>
+            <div id="list57" class="list-details">
+                <p>Grande y Fuerte</p>
+                <p>Eres Señor vencedor</p>
+                <p>Celebra Victorioso</p>
+                <p>Remolineando</p>
+                <p>El Poderoso de Israel</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Hermoso Nombre</p>
+                <p>Dios le envió</p>
+                <p>Cristo te exalto</p>
+                <p><strong>OFRENDAS:</strong>  Rebosa mi corazón</p>
+                <button class="download-btn" onclick="downloadList('list57', 'Lista DOMINGO 30')">Descargar en Word</button>
+            </div>
+    </section>
+    <br>
+    <h2>JUNIO 2023</h2>
+        <section>
+        <h3 onclick="toggleList('list59')">Lista Junio 2023 - DOMINGO 11</h3>
+            <div id="list59" class="list-details">
+                <p>Él es el Rey</p>
+                <p>Queremos a Cristo/Quiero conocerte</p>
+                <p>Estamos todos unidos</p>
+                <p>Hosanna</p>
+                <p>Levántate Señor</p>
+                <p>Eres Señor Vencedor</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Creo en ti</p>
+                <p>Aquí Estás (Milagroso abres caminos)</p>
+                <p><strong>OFRENDAS:</strong>  Bueno es alabarte</p>
+                <button class="download-btn" onclick="downloadList('list59', 'Lista DOMINGO 11')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list60')">Lista Junio 2023 - DOMINGO 18</h3>
+            <div id="list60" class="list-details">
+                <p>Libre</p>
+                <p>Resplandece</p>
+                <p>Fiesta</p>
+                <p>Canto danzo</p>
+                <p>Yo venceré</p>
+                <p>El Señor es mi Rey</p>
+                <p>Cristo no está muerto</p>
+                <p>Remolineando (canción completa)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios Imparable</p>
+                <p>Tu Nombre</p>
+                <p><strong>OFRENDAS:</strong>  Pueblos Todos</p>
+                <button class="download-btn" onclick="downloadList('list60', 'Lista DOMINGO 18')">Descargar en Word</button>
+            </div>
+        </section>
+        <h3 onclick="toggleList('list62')">Lista Junio 2023 - DOMINGO 25</h3>
+            <div id="list62" class="list-details">
+                <p>Te Alabaré</p>
+                <p>Tu Nombre oh Dios</p>
+                <p>Cambiaré Mi Tristeza</p>
+                <p>Al que es Digno</p>
+                <p>Tú Habitas</p>
+                <p>Con Mi Dios</p>
+                <p>Has Cambiado Mi Lamento</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios Ha Sido Bueno</p>
+                <p>Siempre Fiel</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list62', 'Lista DOMINGO 25')">Descargar en Word</button>
+            </div>
+        <br>
+        <h2>ABRIL 2023</h2>
+        <section>
+        <h3 onclick="toggleList('list61')">Lista Abril 2023 - DOMINGO 2</h3>
+            <div id="list61" class="list-details">
+                <p>Oh Gracias</p>
+                <p>Te Alabaré</p>
+                <p>Al que me ciñe</p>
+                <p>Soy nueva criatura (Jesús Adrián Romero)</p>
+                <p>Cambiaré mi tristeza</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Alzo mi voz</p>
+                <p>Al que está sentado</p>
+                <p>Agnus Dei (Aleluya)</p>
+                <p><strong>OFRENDAS:</strong>  El gozo del Señor</p>
+                <button class="download-btn" onclick="downloadList('list61', 'Lista DOMINGO 2')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list63')">Lista Abril 2023 - DOMINGO 9</h3>
+            <div id="list63" class="list-details">
+                <p>Grande y Fuerte</p>
+                <p>Eres Señor vencedor</p>
+                <p>Celebra Victorioso</p>
+                <p>Remolineando</p>
+                <p>El Poderoso de Israel</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Hermoso Nombre</p>
+                <p>Dios le envió</p>
+                <p>Cristo te exalto</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list63', 'Lista DOMINGO 9')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list64')">Lista Abril 2023 - DOMINGO 16</h3>
+            <div id="list64" class="list-details">
+                <p>Mi Dios es grande y fuerte</p>
+                <p>Libre (Yo he tomado toda autoridad)</p>
+                <p>Yeshúa</p>
+                <p>Heme Aquí</p>
+                <p>Las Bodas del cordero</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios el más grande</p>
+                <p>Al que está sentado</p>
+                <p><strong>OFRENDAS:</strong>  Cantad alegres (Salmo 100)</p>
+                <button class="download-btn" onclick="downloadList('list64', 'Lista DOMINGO 16')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list65')">Lista Abril 2023 - DOMINGO 23</h3>
+            <div id="list65" class="list-details">
+                <p>Guárdame oh Dios</p>
+                <p>Bendeciré a Jehová</p>
+                <p>Cantaré yo a Jehová</p>
+                <p>Trae un Salmo</p>
+                <p>Te exaltaré (3 veces)</p>
+                <p>Alzaré mis ojos (3 veces)</p>
+                <p>Yo me alegré (3 veces)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Cuán grande es él</p>
+                <p>Queremos darte gloria</p>
+                <p>Tu Fidelidad</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list65', 'Lista DOMINGO 23')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list66')">Lista Abril 2023 - DOMINGO 30</h3>
+            <div id="list66" class="list-details">
+                <p>El Dios que adoramos</p>
+                <p>Hay Libertad (Art Aguilera)</p>
+                <p>Los Muros Caerán</p>
+                <p>Canto, danzo, salto</p>
+                <p>Yo Venceré (versión completa)</p>
+                <p>Así como David danzaba)</p>
+                <p>Cantaré al Señor</p>
+                <p>Me gozaré</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Siempre Fiel</p>
+                <p>A tus pies (no hay lugar más alto)</p>
+                <p><strong>OFRENDAS:</strong>  Bueno es alabarte</p>
+                <button class="download-btn" onclick="downloadList('list66', 'Lista DOMINGO 30')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list67')">Lista de semana santa 2023</h3>
+            <div id="list67" class="list-details">
+                <h4>Primera noche</h4>
+                <p>Dios Poderoso</p>
+                <p>Hay Libertad (IBI)</p>
+                <p>Popurrí:Libre</p>
+                <p>Resplandece</p>
+                <p>Fiesta</p>
+                <p>Toda la noche</p>
+                <p>El Señor es mi rey</p>
+                <p><p>El Señor es mi rey</p></p>
+                <p><strong>ADORACIONES:</strong> Tu Nombre</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <br>
+                <h4>Segunda noche</h4>
+                <p>El Dios que adoramos</p>
+                <p>Hay Libertad (Art Aguilera)</p>
+                <p>Los Muros Caerán</p>
+                <p>Canto, danzo, salto</p>
+                <p>Yo Venceré (versión completa)</p>
+                <p>Así como David danzaba</p>
+                <p>Cantaré al Señor</p>
+                <p>Me gozaré</p>
+                <p><strong>ADORACIONES:</strong>Siempre Fiel</p>
+                <p><strong>OFRENDAS:</strong>  Guárdame oh Dios</p>
+                <button class="download-btn" onclick="downloadList('list67', 'Lista de semana santa 2023')">Descargar en Word</button>
+            </div>
+        </section>
+        <br>
+        <h2>MARZO 2023</h2>
+        <section>
+        <h3 onclick="toggleList('list68')">Lista Marzo 2023 - DOMINGO 5</h3>
+            <div id="list68" class="list-details">
+                <p>Bueno es alabarte</p>
+                <p>Tú habitas</p>
+                <p>Con mi Dios</p>
+                <p>Él es el rey</p>
+                <p>Queremos a Cristo Celebrar</p>
+                <p>Quiero Conocerte</p>
+                <p>Estamos todos unidos	</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Tu Fidelidad</p>
+                <p>Cuán grande es él</p>
+                <p><strong>OFRENDAS:</strong>  Alabad a Jehová</p>
+                <button class="download-btn" onclick="downloadList('list68', 'Lista DOMINGO 5')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list69')">Lista Marzo 2023 - DOMINGO 12</h3>
+            <div id="list69" class="list-details">
+                <p></p>
+                <p>Tu nombre oh Dios</p>
+                <p>Cambiaré a mi tristeza</p>
+                <p>Al que es digno</p>
+                <p>Increíble</p>
+                <p>Dios Poderoso (IBI)</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Milagroso, abres caminos</p>
+                <p>Cristo te exalto </p>
+                <p>Al estar aquí (Marcos Witt) </p>
+                <p><strong>OFRENDAS:</strong>  Rebosa mi corazón</p>
+                <button class="download-btn" onclick="downloadList('list69', 'Lista DOMINGO 12')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list70')">Lista Marzo 2023 - DOMINGO 19</h3>
+            <div id="list70" class="list-details">
+                <p>Grande y Fuerte</p>
+                <p>Eres Señor vencedor</p>
+                <p>Celebra Victorioso</p>
+                <p>Remolineando</p>
+                <p>El Poderoso de Israel</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> Dios Imparable</p>
+                <p>Hermoso Nombre</p>
+                <p>Creo en ti</p>
+                <p><strong>OFRENDAS:</strong>  Te exaltamos</p>
+                <button class="download-btn" onclick="downloadList('list70', 'Lista DOMINGO 19')">Descargar en Word</button>
+            </div>
+            <h3 onclick="toggleList('list71')">Lista Marzo 2023 - DOMINGO 26</h3>
+            <div id="list71" class="list-details">
+                <p>Canto, danzo, salto (Miel San Marcos)</p>
+                <p>Yo venceré (Miel San Marcos)</p>
+                <p>Fiesta</p>
+                <p>Con Óleo de alegría</p>
+                <p>El Señor es mi Rey</p>
+                <br>
+                <p><strong>ADORACIONES:</strong> El Dios que adoramos (IBI)</p>
+                <p>Dios el más grande (Juan C. Alvarado) </p>
+                <p>No hay lugar más alto</p>
+                <p><strong>OFRENDAS:</strong>  Cantad alegres (Salmo100)</p>
+                <button class="download-btn" onclick="downloadList('list71', 'Lista DOMINGO 26')">Descargar en Word</button>
+            </div>
+        </section>
+        <br>
+        <h2>Hacerlo con amor ;)</h2>
+<img src="imagen/i1.jpeg" alt="Descripción de la imagen" style="display: block; margin: 10px auto; max-width: 300px;">
     </div>
 </body>
 </html>
